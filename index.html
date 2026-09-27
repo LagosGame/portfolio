@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Germán Cabrera — Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --azul-marino: #16324F;
+    --teal: #2E86AB;
+    --fondo: #F5F7FA;
+    --texto: #1C2B36;
+    --texto-suave: #3E4C57;
+    --texto-tenue: #7A8A96;
+    --borde: #DDE4EA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { color: var(--azul-marino); text-decoration: underline; }
+
+  header, footer {
+    background: var(--azul-marino);
+    padding: 56px 24px;
+  }
+  header .inner, footer .inner, main .seccion {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  header .inner { display: flex; flex-direction: column; gap: 14px; }
+  header h1 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: clamp(28px, 5vw, 40px);
+    color: #fff;
+    margin: 0;
+  }
+  header .rol { font-size: 18px; color: var(--teal); font-weight: 600; }
+  header .intro { font-size: 15px; color: #C7D2DA; max-width: 620px; }
+  .contacto {
+    display: flex; gap: 14px; flex-wrap: wrap; align-items: center;
+    margin-top: 6px; font-size: 14px;
+  }
+  .contacto a, .contacto span.loc { color: #fff; }
+  .contacto .sep { color: #4A6478; }
+
+  main { padding: 48px 24px; }
+  .seccion { display: flex; flex-direction: column; gap: 12px; margin-bottom: 56px; }
+  .kicker {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--teal); font-weight: 700;
+  }
+  .seccion h2 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 28px; color: var(--azul-marino); margin: 0;
+  }
+  .seccion p { font-size: 15px; color: var(--texto-suave); max-width: 640px; margin: 0; }
+
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+  .tag {
+    background: #E6EEF3; color: var(--azul-marino);
+    font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 20px;
+  }
+
+  .botones { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+  .btn {
+    font-size: 14px; font-weight: 600; padding: 11px 20px; border-radius: 8px;
+  }
+  .btn-primario { background: var(--teal); color: #fff; }
+  .btn-primario:hover { background: var(--azul-marino); color: #fff; text-decoration: none; }
+  .btn-secundario { background: #fff; border: 1px solid var(--borde); color: var(--azul-marino); }
+  .btn-secundario:hover { text-decoration: none; border-color: var(--teal); }
+
+  .nota { font-size: 12px; color: var(--texto-tenue); margin-top: 4px; }
+  code {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    background: #E6EEF3; color: var(--azul-marino);
+    padding: 2px 6px; border-radius: 4px; font-size: 0.9em;
+  }
+  .separador { border: none; border-top: 1px solid var(--borde); max-width: 760px; margin: 0 auto 56px; }
+
+  .capturas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+  .capturas img {
+    width: 220px; height: auto; border-radius: 8px; border: 1px solid var(--borde);
+  }
+
+  footer .inner {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 13px; color: #C7D2DA; margin: 0; }
+  footer .links { display: flex; gap: 18px; font-size: 13px; }
+  footer .links a { color: #fff; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>Germán Cabrera Alemán</h1>
+    <div class="rol">Backend Developer — Java · Spring Boot</div>
+    <p class="intro">Desarrollador backend recién formado en DAM, especializado en Java y Spring Boot. Aquí tienes acceso directo a mis proyectos: código, documentación y, en el caso del primero, la aplicación funcionando en vivo.</p>
+    <div class="contacto">
+      <a href="mailto:germancabrerita@gmail.com">germancabrerita@gmail.com</a>
+      <span class="sep">·</span>
+      <a href="tel:+34601292800">601 292 800</a>
+      <span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/germán-cabrera-4a4327419/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/LagosGame" target="_blank" rel="noopener">github.com/LagosGame</a>
+      <span class="sep">·</span>
+      <span class="loc">Alicante</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="seccion">
+    <div class="kicker">Proyecto 01 — Fullstack</div>
+    <h2>Gestión de Tributos Municipales</h2>
+    <p>API REST en Java/Spring Boot que gestiona contribuyentes, recibos, pagos y el cálculo automático de recargos por impago según la Ley General Tributaria (5% / 10% / 20% + intereses de demora), con un frontend en React que consume la API en tiempo real y simula el importe a pagar antes de confirmar. Backend en Render, base de datos en Neon, frontend en Vercel.</p>
+
+    <div class="tags">
+      <span class="tag">Java 21</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">React</span>
+      <span class="tag">Docker</span>
+      <span class="tag">JUnit 5 / Mockito</span>
+    </div>
+
+    <!-- Cuando tengas capturas, descomenta y ajusta las rutas:
+    <div class="capturas">
+      <img src="capturas/tributos-1.png" alt="Tabla de contribuyentes en la app de tributos">
+      <img src="capturas/tributos-2.png" alt="Detalle de un recibo con el recargo calculado">
+    </div>
+    -->
+
+    <div class="botones">
+      <a class="btn btn-primario" href="https://gestion-municipal-frontend-nntf.vercel.app/" target="_blank" rel="noopener">Abrir aplicación en vivo →</a>
+      <a class="btn btn-secundario" href="https://gestion-tributos-backend.onrender.com/swagger-ui.html" target="_blank" rel="noopener">Ver API (Swagger)</a>
+      <a class="btn btn-secundario" href="https://github.com/LagosGame/gestion_municipal" target="_blank" rel="noopener">Código backend</a>
+      <a class="btn btn-secundario" href="https://github.com/LagosGame/gestion-municipal-frontend" target="_blank" rel="noopener">Código frontend</a>
+    </div>
+    <div class="nota">El backend está en un plan gratuito y puede tardar unos segundos en despertar en la primera visita.</div>
+  </section>
+
+  <hr class="separador">
+
+  <section class="seccion">
+    <div class="kicker">Proyecto 02 — Android</div>
+    <h2>DigitalHub</h2>
+    <p>Aplicación Android para jugadores del TCG de Digimon: biblioteca interactiva de cartas con filtros, creación y gestión de mazos, tier list de arquetipos y perfil de usuario, con autenticación y persistencia real en Firebase. Construida en Kotlin con Jetpack Compose, siguiendo Clean Architecture (data / domain / presentation) y MVVM con casos de uso.</p>
+
+    <div class="tags">
+      <span class="tag">Kotlin</span>
+      <span class="tag">Jetpack Compose</span>
+      <span class="tag">Firebase Auth</span>
+      <span class="tag">Firestore</span>
+      <span class="tag">Clean Architecture</span>
+      <span class="tag">MVVM</span>
+    </div>
+
+    <div class="capturas">
+      <img src="capturas/digitalhub-home.png" alt="Pantalla principal de DigitalHub">
+      <img src="capturas/digitalhub-biblioteca.png" alt="Biblioteca de cartas con filtros en DigitalHub">
+      <img src="capturas/digitalhub-mazo.png" alt="Editor de mazo de DigitalHub">
+    </div>
+
+    <div class="botones">
+      <a class="btn btn-primario" href="https://github.com/LagosGame/DigitalHub/releases/tag/v1.0.0" target="_blank" rel="noopener">Descargar APK →</a>
+      <a class="btn btn-secundario" href="https://github.com/LagosGame/DigitalHub" target="_blank" rel="noopener">Ver código en GitHub</a>
+    </div>
+    <div class="nota">App Android nativa (APK de depuración) — necesitarás activar "orígenes desconocidos" en tu dispositivo para instalarla, al no venir de Google Play.</div>
+  </section>
+
+  <hr class="separador">
+
+  <section class="seccion">
+    <div class="kicker">Proyecto 03 — Backend / Mensajería</div>
+    <h2>Incidencias API</h2>
+    <p>API REST en Spring Boot para la gestión de incidencias municipales, con caché distribuida en Redis (invalidación automática con <code>@CacheEvict</code> en cada escritura) y publicación de eventos en tiempo real con Apache Kafka cada vez que una incidencia cambia de estado. La máquina de estados vive encapsulada en la propia entidad de dominio, cubierta por tests. Todo el stack (Postgres, Redis, Kafka y la API) se levanta con un único comando de Docker Compose.</p>
+
+    <div class="tags">
+      <span class="tag">Java 21</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Apache Kafka</span>
+      <span class="tag">Redis</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Docker Compose</span>
+    </div>
+
+    <div class="capturas">
+      <img src="capturas/incidencias-swagger.png" alt="Documentación Swagger de la API de incidencias" style="width: 340px">
+    </div>
+
+    <div class="botones">
+      <a class="btn btn-primario" href="https://github.com/LagosGame/incidencias-api" target="_blank" rel="noopener">Ver código en GitHub →</a>
+    </div>
+    <div class="nota">Solo backend — pruébalo localmente con <code>docker compose up --build</code> y la documentación interactiva en Swagger.</div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="inner">
+    <p>Gracias por revisar mi trabajo — encantado de hablar en una entrevista.</p>
+    <div class="links">
+      <a href="mailto:germancabrerita@gmail.com">Email</a>
+      <a href="tel:+34601292800">Teléfono</a>
+      <a href="https://www.linkedin.com/in/germán-cabrera-4a4327419/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/LagosGame" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
